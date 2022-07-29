@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useToast } from "@chakra-ui/react";
 
 import Title from "./components/Title";
+import Password from "./components/Password";
 
 function App() {
   const toast = useToast();
@@ -41,7 +42,14 @@ function App() {
   };
   return (
     <div className="flex justify-center items-center h-screen">
-      <Title />
+      <div className="space-y-2">
+        <Title />
+        <Password
+          password={password}
+          setPassword={setPassword}
+          copyPassword={copyPassword}
+        />
+      </div>
     </div>
   );
 }
