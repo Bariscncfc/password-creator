@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useToast } from "@chakra-ui/react";
 import RangeSlider from "./components/RangeSlider";
+import FormControl from "./components/FormControl";
 
 import Title from "./components/Title";
 import Password from "./components/Password";
@@ -54,6 +55,16 @@ function App() {
           passwordLength={passwordLength}
           setPasswordLength={setPasswordLength}
           handleChange={handleChange}
+        />
+        <FormControl
+          uppercase={uppercase}
+          setUppercase={setUppercase}
+          lowercase={lowercase}
+          setLowercase={setLowercase}
+          numbers={numbers}
+          setNumbers={setNumbers}
+          symbols={symbols}
+          setSymbols={setSymbols}
         />
       </div>
     </div>
