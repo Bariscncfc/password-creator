@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { useToast } from "@chakra-ui/react";
+
+import Title from "./components/Title";
 
 function App() {
   const toast = useToast();
@@ -36,7 +39,11 @@ function App() {
       });
     }
   };
-  return <div></div>;
+  return (
+    <div className="flex justify-center items-center h-screen">
+      <Title />
+    </div>
+  );
 }
 
 export default App;
