@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useToast } from "@chakra-ui/react";
+import RangeSlider from "./components/RangeSlider";
 
 import Title from "./components/Title";
 import Password from "./components/Password";
@@ -48,6 +49,11 @@ function App() {
           password={password}
           setPassword={setPassword}
           copyPassword={copyPassword}
+        />
+        <RangeSlider
+          passwordLength={passwordLength}
+          setPasswordLength={setPasswordLength}
+          handleChange={handleChange}
         />
       </div>
     </div>
