@@ -2,10 +2,7 @@ import { useState } from "react";
 import { useToast } from "@chakra-ui/react";
 import RangeSlider from "./components/RangeSlider";
 import FormControl from "./components/FormControl";
-import {
-  NotificationContainer,
-  NotificationManager,
-} from "react-notifications";
+import alertify from "alertifyjs";
 
 import Title from "./components/Title";
 import Password from "./components/Password";
@@ -29,9 +26,9 @@ function App() {
   const copyPassword = async (password) => {
     try {
       await navigator.clipboard.writeText(password);
-      NotificationManager.success("Success message", "Title here");
+      alertify.notify("Password copied to clipboard", "success", 5);
     } catch (err) {
-      console.error("error");
+      alertify.notify("error");
     }
   };
 
@@ -71,8 +68,8 @@ function App() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="space-y-2">
+    <div className="flex justify-center items-center h-screen bg-gray-200 ">
+      <div className="space-y-4 shadow-xl	 ">
         <Title />
         <Password
           password={password}
@@ -95,8 +92,7 @@ function App() {
           setSymbols={setSymbols}
         />
         <button
-          type="button"
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="w-full h-12 px-6 font-poppins text-white transition-colors duration-150 bg-gray-800 hover:bg-gray-900 rounded-lg focus:shadow-outline shadow-xl	"
           onClick={generatePassword}
         >
           Create

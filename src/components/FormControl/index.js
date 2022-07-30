@@ -1,4 +1,4 @@
-import { FormControlLabel, FormGroup, Switch } from "@mui/material";
+import { FormControlLabel, Switch } from "@mui/material";
 import React from "react";
 
 const FormControl = ({
@@ -27,6 +27,7 @@ const FormControl = ({
         control={
           <Switch
             {...lowercase}
+            color="secondary"
             checked={lowercase}
             onChange={() => setLowercase(!lowercase)}
           />
@@ -37,6 +38,7 @@ const FormControl = ({
         control={
           <Switch
             {...numbers}
+            color="warning"
             checked={numbers}
             onChange={() => setNumbers(!numbers)}
           />
@@ -47,6 +49,7 @@ const FormControl = ({
         control={
           <Switch
             {...symbols}
+            color="success"
             checked={symbols}
             onChange={() => setSymbols(!symbols)}
           />
