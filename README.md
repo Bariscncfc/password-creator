@@ -1,6 +1,6 @@
 # Password-Creator
 
-Responsive Todo manage App with ReactJs-Redux-TypeScript.
+A simple password creator built with React
 
 ## Build Setup
 
