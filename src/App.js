@@ -1,15 +1,13 @@
 import { useState } from "react";
-import { useToast } from "@chakra-ui/react";
 import RangeSlider from "./components/RangeSlider";
 import FormControl from "./components/FormControl";
 import alertify from "alertifyjs";
 
 import Title from "./components/Title";
 import Password from "./components/Password";
+import Footer from "./components/Footer/Footer";
 
 function App() {
-  const toast = useToast();
-
   const [uppercase, setUppercase] = useState(false);
   const [lowercase, setLowercase] = useState(false);
   const [numbers, setNumbers] = useState(false);
@@ -68,8 +66,8 @@ function App() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-200 ">
-      <div className="space-y-4 shadow-xl	 ">
+    <div className="flex justify-center items-center lg:h-[100vh] h-[120vh] bg-gray-200 ">
+      <div className="space-y-4 shadow-xl px-16	 ">
         <Title />
         <Password
           password={password}
@@ -97,6 +95,7 @@ function App() {
         >
           Create
         </button>
+        <Footer />
       </div>
     </div>
   );
