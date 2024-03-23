@@ -2,8 +2,7 @@
 
 A simple password creator built with React
 
-[link]([doc:linking-to-pages#anchor-links](https://creatorpassword.netlify.app/))
-
+[live](https://creatorpassword.netlify.app/)
 
 ## Build Setup
 
